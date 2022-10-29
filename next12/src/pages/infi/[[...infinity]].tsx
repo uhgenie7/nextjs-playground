@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Layout from '../components/Layout';
-import SubLayout from '../components/SubLayout';
+import Layout from '../../components/Layout';
+import SubLayout from '../../components/SubLayout';
 
 // 무한 슬러그
+// [[...slug]]이면 값이 없어도 기본페이지가 노출된다.
+// [...slug]일 때는 값이 없으면 404
 
 const Infinity = () => {
   const [time, setTime] = useState('');
