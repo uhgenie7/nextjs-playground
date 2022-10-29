@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { userDetail } from '../../constants/userDetail';
+
 type Data = {
   name: string;
 };
@@ -9,5 +9,6 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json(userDetail);
+  const { uid } = req.query;
+  res.status(200).json({ name: `다이나믹 슬러그 ${uid}` });
 }
