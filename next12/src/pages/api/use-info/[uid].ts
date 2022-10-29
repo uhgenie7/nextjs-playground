@@ -10,5 +10,10 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   const { uid } = req.query;
-  res.status(200).json({ name: `다이나믹 슬러그 ${uid}` });
+  const cookies = req.cookies;
+  res.status(200).json({
+    name: `다이나믹 슬러그 ${uid} 쿠키도 꺼내올 수 있어요 ${JSON.stringify(
+      cookies
+    )}`,
+  });
 }
