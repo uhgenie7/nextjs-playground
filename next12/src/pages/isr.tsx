@@ -1,7 +1,7 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export async function getStaticProps() {
-  console.log('server');
+  console.log("server");
 
   return {
     props: { time: new Date().toISOString() },

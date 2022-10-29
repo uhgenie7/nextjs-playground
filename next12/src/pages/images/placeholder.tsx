@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import ViewSource from '../../components/view-source';
-import mountains from '../../../public/mountains.jpg';
+import Image from "next/image";
+import ViewSource from "../../components/view-source";
+import mountains from "../../../public/mountains.jpg";
 
 const PlaceholderBlur = () => (
   <div>
@@ -13,8 +13,8 @@ const PlaceholderBlur = () => (
       width={700}
       height={475}
       style={{
-        maxWidth: '100%',
-        height: 'auto',
+        maxWidth: "100%",
+        height: "auto",
       }}
     />
   </div>

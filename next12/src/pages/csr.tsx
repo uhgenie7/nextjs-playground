@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import SubLayout from '../components/SubLayout';
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import Layout from "../components/Layout";
+import SubLayout from "../components/SubLayout";
 
 const CSR = () => {
-  const [time, setTime] = useState('');
+  const [time, setTime] = useState("");
 
   useEffect(() => {
-    console.log('client');
+    console.log("client");
     setTime(new Date().toISOString());
   }, []);
 

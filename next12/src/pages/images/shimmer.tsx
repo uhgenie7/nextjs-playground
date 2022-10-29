@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import ViewSource from '../../components/view-source';
+import Image from "next/image";
+import ViewSource from "../../components/view-source";
 
 const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -16,8 +16,8 @@ const shimmer = (w: number, h: number) => `
 </svg>`;
 
 const toBase64 = (str: string) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
+  typeof window === "undefined"
+    ? Buffer.from(str).toString("base64")
     : window.btoa(str);
 
 const Shimmer = () => (
@@ -32,8 +32,8 @@ const Shimmer = () => (
       width={700}
       height={475}
       style={{
-        maxWidth: '100%',
-        height: 'auto',
+        maxWidth: "100%",
+        height: "auto",
       }}
     />
   </div>
