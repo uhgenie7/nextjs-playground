@@ -6,3 +6,8 @@
   - 상태는 유지하고 URL만 바꾸고 싶을 경우. 사용자가 어떤 동작을 했고 그 기록을 쿼리로 남기고 싶을 때, 새로고침을 해도 유지된다. (무한스크롤 탐색)
   - 즉 데이터 패치가 일어나지 않게 함
   - `router.push(url, as, { shallow: true })`: 로컬 state 유지 / data fetching x
+
+- [ ] api router
+  - API Middlewares(내장 Middleware)
+  - req.cookies / req.query 등 Middleware 들을 활용
+  - ex) CORS

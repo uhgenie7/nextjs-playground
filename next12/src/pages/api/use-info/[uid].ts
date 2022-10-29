@@ -16,4 +16,6 @@ export default function handler(
       cookies
     )}`,
   });
+  //   res.status(404).send({ error: 'error' });
+  //   res.redirect(307, '/api/hello');
 }
