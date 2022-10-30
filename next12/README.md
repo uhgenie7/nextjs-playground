@@ -7,7 +7,17 @@
   - 즉 데이터 패치가 일어나지 않게 함
   - `router.push(url, as, { shallow: true })`: 로컬 state 유지 / data fetching x
 
-- [ ] api router
+- [ ] api routes
   - API Middlewares(내장 Middleware)
   - req.cookies / req.query 등 Middleware 들을 활용
   - ex) CORS
+  - 클라이언트 사이드에서 서버 사이드로 요청하기 위한 것.
+  - 서버사이드에서는 api routes를 사용하지 않아야 함
+- [ ] getStaticPath - 생성해둬야 하는 페이지 정보를 배열로 반환해야 함
+  - 클라이언트 사이드 코드에 포함되지 않음. 결과물만 있음.
+- [ ] getStaticProps - 실제 데이터 목록들
+  - 클라이언트 사이드 코드에 포함되지 않음. 결과물만 있음.
+- [ ] fallback
+  - false: 없는 링크일 시 404 error
+  - true: getStaticPath가 빌드할 때 없었는데, getStaticProps로 조회할 때는 있을 수 있을 때 사용. 사용하다보니 데이터가 차서 화면을 그려야 할 때 활용된다. 로딩("fallback")을 보여주고 데이터가 오면 보여준다.
+  - blocking: getStaticPath가 빌드할 때 없었는데, getStaticProps로 조회할 때는 있을 수 있을 때 사용. 로딩화면 없이("fallback" 없이) 그냥 기다렸다가 데이터가 오면 보여준다.
